@@ -17,7 +17,6 @@ def client():
 @pytest.fixture(autouse=True)
 def reset_activities():
     """Reset activities data before each test"""
-    global activities
     # Store original state
     original_activities = copy.deepcopy(activities)
     yield
